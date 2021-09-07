@@ -1,0 +1,23 @@
+    {% extends 'base.html' %}
+    {% block title %}
+    <title>listall2</title>
+    {% endblock %}
+    {% block content %}
+
+ <h2 align="left">display all student info</h2>
+<table border="1" cellspacing="0" cellpadding="0">
+     <th>ID</th><th>Name</th><th>Sex</th><th>DOB</th>
+    <th>Email</th><th>Phone</th><th>Addr</th>
+    {% for stud_info in stud_infomation %}
+    <tr>
+        <td>{{stud_info.id}}</td>
+        <td>{{stud_info.cName}}</td>
+        <td>{{stud_info.cSex}}</td>
+        <td>{{stud_info.cDob}}</td>
+        <td>{{stud_info.cEmail}}</td>
+        <td>{{stud_info.cPhone}}</td>
+        <td>{{stud_info.cAddr}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
